@@ -36,4 +36,17 @@ public class Libro {
         return titulo;
     }
     
+    /**
+     * Imprime el autor
+     */
+    public void imprimeAutor(){
+        System.out.println(autor);
+    }
+    
+    /**
+     * Imprime el titulo
+     */
+    public void imprimeTitulo(){
+        System.out.println(titulo);
+    }
 }
