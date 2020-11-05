@@ -13,6 +13,7 @@ public class Libro {
     private String autor;
     private String titulo;
     private int numeroPaginas;
+    private String numeroReferencia;
 
     /**
      * Fija el autor y el titulo del libro a los dados como parametro
@@ -22,6 +23,25 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
         numeroPaginas = paginasTotales;
+        numeroReferencia = "";
+    }
+
+    /**
+     * Establece un numero de referencia
+     */
+    public void setReferencia(String referencia){
+        if(referencia.length() < 3){
+            System.out.println("¡Parametro no válido! Introdúcelo de nuevo.");
+        } else{
+            numeroReferencia = referencia;
+        }
+    }
+
+    /**
+     * Devuelve el numero de referencia del libro
+     */
+    public String getreferencia(){
+        return numeroReferencia;
     }
 
     /**
@@ -46,13 +66,6 @@ public class Libro {
     }
 
     /**
-     * Devuelve detalles del libro
-     */
-    public String getDetalles(){
-        String aDevolver = "Título: " + titulo + ", autor: " + autor + ", páginas: " + numeroPaginas + ".";
-        return aDevolver;
-    }
-    /**
      * Imprime el autor
      */
     public void imprimeAutor(){
@@ -67,11 +80,22 @@ public class Libro {
     }
 
     /**
+     * Devuelve detalles del libro
+     */
+    public String getDetalles(){
+        String laReferencia = numeroReferencia;
+        if(numeroReferencia == ""){
+            laReferencia = "ZZZ"; 
+        }
+        String aDevolver = "Título: " + titulo + ", autor: " + autor + ", páginas: " + numeroPaginas + ", referencia: " + laReferencia + ".";
+        return aDevolver;
+    }
+
+    /**
      * Imprime los detalles del libro
      */
     public void imprimeDetalles(){
         System.out.println(getDetalles());
     }
-    
 
 }
