@@ -23,39 +23,55 @@ public class Libro {
         titulo = tituloLibro;
         numeroPaginas = paginasTotales;
     }
-    
+
     /**
      * Devuelve el autor
      */
     public String getAutor(){
         return autor;
     }
-    
+
     /**
      * Devuelve el titulo
      */
     public String getTitulo(){
         return titulo;
     }
-    
+
     /**
      * Devuelve el numero de paginas
      */
     public int getNumeroPaginas(){
         return numeroPaginas;
     }
-    
+
+    /**
+     * Devuelve detalles del libro
+     */
+    public String getDetalles(){
+        String aDevolver = "Título: " + titulo + ", autor: " + autor + ", páginas: " + numeroPaginas + ".";
+        return aDevolver;
+    }
     /**
      * Imprime el autor
      */
     public void imprimeAutor(){
         System.out.println(autor);
     }
-    
+
     /**
      * Imprime el titulo
      */
     public void imprimeTitulo(){
         System.out.println(titulo);
     }
+
+    /**
+     * Imprime los detalles del libro
+     */
+    public void imprimeDetalles(){
+        System.out.println(getDetalles());
+    }
+    
+
 }
