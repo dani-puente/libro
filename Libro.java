@@ -21,4 +21,19 @@ public class Libro {
         autor = autorLibro;
         titulo = tituloLibro;
     }
+    
+    /**
+     * Devuelve el autor
+     */
+    public String elAutor(){
+        return autor;
+    }
+    
+    /**
+     * Devuelve el titulo
+     */
+    public String elTitulo(){
+        return titulo;
+    }
+    
 }
